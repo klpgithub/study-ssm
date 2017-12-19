@@ -35,7 +35,7 @@ public class PropertiesFileUtil {
 		return getInstance(NAME);
 	}
 
-	private static PropertiesFileUtil getInstance(String name) {
+	public static PropertiesFileUtil getInstance(String name) {
 		PropertiesFileUtil conf = configMap.get(name);
 		if (null == conf) {
 			conf = new PropertiesFileUtil(name);
