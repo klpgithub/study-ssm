@@ -1,22 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.sys</groupId>
-	<artifactId>study</artifactId>
-	<version>1.0.0</version>
+	<parent>
+		<groupId>com.sys</groupId>
+		<artifactId>study</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>study-demo</artifactId>
 	<packaging>pom</packaging>
-
-	<name>study</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<maven.compiler.compilerVersion>1.7</maven.compiler.compilerVersion>
 	</properties>
 
 	<modules>
-		<module>study-common</module>
-		<module>study-demo</module>
+		<module>study-demo-rpc-api</module>
+		<module>study-demo-rpc-service</module>
+		<module>study-demo-web</module>
 	</modules>
 </project>
