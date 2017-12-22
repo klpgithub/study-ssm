@@ -4,6 +4,18 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
+
+	<dubbo:application name="study-demo" />
+
+	<dubbo:registry address="zookeeper://zkserver:2181" />
+
+	<dubbo:protocol name="dubbo" port="20881" />
+	
+	<bean id="springContextUtil" class="com.study.common.util.SpringContextUtil"></bean>
+	
+	<bean class="com.study.common.listener.ApplicationContextListener"
+		lazy-init="false"></bean>
+
 	<bean id="demoService" class="com.sys.demo.rpc.service.impl.DemoServiceImpl" />
 	<dubbo:service interface="com.sys.demo.rpc.api.DemoService"
 		ref="demoService" timeout="5000" retries="0" />

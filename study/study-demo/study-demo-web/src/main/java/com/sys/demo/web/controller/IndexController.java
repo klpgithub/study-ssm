@@ -6,6 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,6 +21,7 @@ import com.sys.demo.web.model.User;
  * @author KLP
  * @date 2017年12月21日下午5:25:39
  */
+@Controller
 public class IndexController extends BaseController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(IndexController.class);
@@ -28,7 +30,8 @@ public class IndexController extends BaseController {
 	private DemoService demoService;
 
 	@RequestMapping(value = "/jsp", method = RequestMethod.GET)
-	public String jsp() {
+	public String jsp(Model model) {
+		model.addAttribute("demo", demoService.sayHello("jetty"));
 		return jsp("/index");
 	}
 
