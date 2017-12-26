@@ -49,26 +49,29 @@
         <jdbcConnection driverClass="${generator.jdbc.driver}"
                         connectionURL="${generator.jdbc.url}"
                         userId="${generator.jdbc.username}"
-                        password="${generator_jdbc_password}" />
+                        password="root" />
 
         <!-- model生成 -->
-        <javaModelGenerator targetPackage="${generator_javaModelGenerator_targetPackage}" targetProject="${targetProject}/src/main/java" />
+        <javaModelGenerator targetPackage="com.study.upms.dao.model" targetProject="D:/work/zheng/my/study-ssm/study/study-upms/study-upms-dao/src/main/java" />
 
         <!-- MapperXML生成 -->
-        <sqlMapGenerator targetPackage="${generator_sqlMapGenerator_targetPackage}" targetProject="${targetProject_sqlMap}/src/main/java" />
+        <sqlMapGenerator targetPackage="com.study.upms.dao.mapper" targetProject="D:/work/zheng/my/study-ssm/study/study-upms/study-upms-rpc-service/src/main/java" />
 
         <!-- Mapper接口生成 -->
-        <javaClientGenerator targetPackage="${generator_javaClientGenerator_targetPackage}" targetProject="${targetProject}/src/main/java" type="XMLMAPPER" />
+        <javaClientGenerator targetPackage="com.study.upms.dao.mapper" targetProject="D:/work/zheng/my/study-ssm/study/study-upms/study-upms-dao/src/main/java" type="XMLMAPPER" />
 
         <!-- 需要映射的表 -->
-        #foreach($table in $tables)
-            #if($last_insert_id_tables.containsKey($!table.table_name) == true)
-                <table tableName="$!table.table_name" domainObjectName="$!table.model_name">
-                    <generatedKey column="$!last_insert_id_tables.get($!table.table_name)" sqlStatement="MySql" identity="true"/>
+                                    <table tableName="upms_log" domainObjectName="UpmsLog"></table>
+                                                <table tableName="upms_organization" domainObjectName="UpmsOrganization"></table>
+                                                <table tableName="upms_permission" domainObjectName="UpmsPermission"></table>
+                                                <table tableName="upms_role" domainObjectName="UpmsRole"></table>
+                                                <table tableName="upms_role_permission" domainObjectName="UpmsRolePermission"></table>
+                                                <table tableName="upms_system" domainObjectName="UpmsSystem"></table>
+                                                <table tableName="upms_user" domainObjectName="UpmsUser">
+                    <generatedKey column="user_id" sqlStatement="MySql" identity="true"/>
                 </table>
-            #else
-                <table tableName="$!table.table_name" domainObjectName="$!table.model_name"></table>
-            #end
-        #end
-    </context>
+                                                <table tableName="upms_user_organization" domainObjectName="UpmsUserOrganization"></table>
+                                                <table tableName="upms_user_permission" domainObjectName="UpmsUserPermission"></table>
+                                                <table tableName="upms_user_role" domainObjectName="UpmsUserRole"></table>
+                        </context>
 </generatorConfiguration>
