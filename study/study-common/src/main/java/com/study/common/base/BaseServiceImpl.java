@@ -442,6 +442,7 @@ public abstract class BaseServiceImpl<Mapper, Record, Example> implements BaseSe
 	 * 
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public Class<Mapper> getMapperClass() {
 		return (Class<Mapper>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	}

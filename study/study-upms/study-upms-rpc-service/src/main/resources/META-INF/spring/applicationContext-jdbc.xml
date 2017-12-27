@@ -110,7 +110,7 @@
 	<!-- 事物管理器 -->
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" value="dataSource"></property>
+		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 
 	<!-- 启动事物注解 -->

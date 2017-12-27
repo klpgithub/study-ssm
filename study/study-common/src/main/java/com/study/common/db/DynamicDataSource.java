@@ -2,13 +2,14 @@ package com.study.common.db;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 /**
  * 动态数据源 (数据源切换)
  * 
  * @author KLP 2017年12月17日下午6:23:38
  */
-public class DynamicDataSource {
+public class DynamicDataSource extends AbstractRoutingDataSource {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(DynamicDataSource.class);
 
