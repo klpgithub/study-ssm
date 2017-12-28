@@ -7,17 +7,20 @@ import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.study.upms.dao.model.UpmsLog;
 import com.study.upms.dao.model.UpmsLogExample;
 import com.study.upms.rpc.api.UpmsLogService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:META-INF/spring/*.xml")
-@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = false)
+@ContextConfiguration(locations = { "classpath:META-INF/spring/*.xml" })
+@Rollback(value=true)
+@Transactional(transactionManager = "transactionManager")
 public class UpmsLogServiceImplTest {
 
 	@Autowired
