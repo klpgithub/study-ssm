@@ -26,4 +26,10 @@ public class UpmsUserRoleServiceImpl extends BaseServiceImpl<UpmsUserRoleMapper,
     @Autowired
     UpmsUserRoleMapper upmsUserRoleMapper;
 
+	@Override
+	public int role(String[] roleIds, int id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

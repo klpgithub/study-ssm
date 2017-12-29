@@ -1,5 +1,6 @@
 package com.study.upms.rpc.service.impl;
 
+import com.alibaba.fastjson.JSONArray;
 import com.study.common.annotation.BaseService;
 import com.study.common.base.BaseServiceImpl;
 import com.study.upms.dao.mapper.UpmsPermissionMapper;
@@ -25,5 +26,15 @@ public class UpmsPermissionServiceImpl extends BaseServiceImpl<UpmsPermissionMap
 
     @Autowired
     UpmsPermissionMapper upmsPermissionMapper;
+
+	@Override
+	public JSONArray getTreeByRoleId(Integer roleId) {
+		return null;
+	}
+
+	@Override
+	public JSONArray getTreeByUserId(Integer userId, Byte type) {
+		return null;
+	}
 
 }

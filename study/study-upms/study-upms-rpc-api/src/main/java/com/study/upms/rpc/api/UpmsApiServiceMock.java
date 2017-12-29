@@ -10,9 +10,11 @@ import com.study.upms.dao.model.UpmsOrganization;
 import com.study.upms.dao.model.UpmsOrganizationExample;
 import com.study.upms.dao.model.UpmsPermission;
 import com.study.upms.dao.model.UpmsRole;
+import com.study.upms.dao.model.UpmsRolePermission;
 import com.study.upms.dao.model.UpmsSystem;
 import com.study.upms.dao.model.UpmsSystemExample;
 import com.study.upms.dao.model.UpmsUser;
+import com.study.upms.dao.model.UpmsUserPermission;
 
 /**
  * 降级实现UpmsApiService接口
@@ -49,13 +51,13 @@ public class UpmsApiServiceMock implements UpmsApiService {
 	}
 
 	@Override
-	public List<UpmsPermission> selectUpmsRolePermissionByUpmsRoleId(Integer upmsRoleId) {
+	public List<UpmsRolePermission> selectUpmsRolePermissionByUpmsRoleId(Integer upmsRoleId) {
 		LOGGER.info("UpmsApiServiceMock => selectUpmsRolePermissionByUpmsRoleId");
 		return null;
 	}
 
 	@Override
-	public List<UpmsPermission> selectUpmsUserPermissionByUpmsUserId(Integer upmsUserId) {
+	public List<UpmsUserPermission> selectUpmsUserPermissionByUpmsUserId(Integer upmsUserId) {
 		LOGGER.info("UpmsApiServiceMock => selectUpmsUserPermissionByUpmsUserId");
 		return null;
 	}

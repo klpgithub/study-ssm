@@ -26,4 +26,10 @@ public class UpmsSystemServiceImpl extends BaseServiceImpl<UpmsSystemMapper, Upm
     @Autowired
     UpmsSystemMapper upmsSystemMapper;
 
+	@Override
+	public UpmsSystem selectUpmsSystemByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

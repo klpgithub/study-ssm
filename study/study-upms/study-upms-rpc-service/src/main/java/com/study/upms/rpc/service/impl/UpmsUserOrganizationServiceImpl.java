@@ -26,4 +26,10 @@ public class UpmsUserOrganizationServiceImpl extends BaseServiceImpl<UpmsUserOrg
     @Autowired
     UpmsUserOrganizationMapper upmsUserOrganizationMapper;
 
+	@Override
+	public int organization(String[] organizationIds, int id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

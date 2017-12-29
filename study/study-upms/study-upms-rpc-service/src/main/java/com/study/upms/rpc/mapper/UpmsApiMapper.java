@@ -1,8 +1,9 @@
 package com.study.upms.rpc.mapper;
 
+import java.util.List;
+
 import com.study.upms.dao.model.UpmsPermission;
 import com.study.upms.dao.model.UpmsRole;
-import com.sun.tools.javac.util.List;
 
 /**
  * 用户VOMapper

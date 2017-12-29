@@ -9,5 +9,13 @@ import com.study.upms.dao.model.UpmsUserRoleExample;
 * Created by shuzheng on 2017/12/26.
 */
 public interface UpmsUserRoleService extends BaseService<UpmsUserRole, UpmsUserRoleExample> {
-
+	
+	/**
+	 * 用户角色
+	 * @author : KLP
+	 * @param roleIds 角色ids
+	 * @param id 用户id
+	 * @return
+	 */
+	int role(String[] roleIds,int id);
 }

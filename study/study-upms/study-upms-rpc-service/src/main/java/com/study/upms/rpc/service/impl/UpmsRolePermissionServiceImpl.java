@@ -1,5 +1,6 @@
 package com.study.upms.rpc.service.impl;
 
+import com.alibaba.fastjson.JSONArray;
 import com.study.common.annotation.BaseService;
 import com.study.common.base.BaseServiceImpl;
 import com.study.upms.dao.mapper.UpmsRolePermissionMapper;
@@ -25,5 +26,11 @@ public class UpmsRolePermissionServiceImpl extends BaseServiceImpl<UpmsRolePermi
 
     @Autowired
     UpmsRolePermissionMapper upmsRolePermissionMapper;
+
+	@Override
+	public int rolePermission(JSONArray data, int id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }

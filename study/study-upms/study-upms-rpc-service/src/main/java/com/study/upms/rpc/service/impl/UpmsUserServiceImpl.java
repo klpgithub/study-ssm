@@ -26,4 +26,10 @@ public class UpmsUserServiceImpl extends BaseServiceImpl<UpmsUserMapper, UpmsUse
     @Autowired
     UpmsUserMapper upmsUserMapper;
 
+	@Override
+	public UpmsUser createUser(UpmsUser upmsUser) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

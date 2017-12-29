@@ -7,9 +7,11 @@ import com.study.upms.dao.model.UpmsOrganization;
 import com.study.upms.dao.model.UpmsOrganizationExample;
 import com.study.upms.dao.model.UpmsPermission;
 import com.study.upms.dao.model.UpmsRole;
+import com.study.upms.dao.model.UpmsRolePermission;
 import com.study.upms.dao.model.UpmsSystem;
 import com.study.upms.dao.model.UpmsSystemExample;
 import com.study.upms.dao.model.UpmsUser;
+import com.study.upms.dao.model.UpmsUserPermission;
 
 /**
  * upms系统接口
@@ -62,15 +64,15 @@ public interface UpmsApiService {
 	 * @param upmsRoleId
 	 * @return
 	 */
-	List<UpmsPermission> selectUpmsRolePermissionByUpmsRoleId(Integer upmsRoleId);
+	List<UpmsRolePermission> selectUpmsRolePermissionByUpmsRoleId(Integer upmsRoleId);
 
 	/**
-	 * 
+	 * 根据用户id获取所拥有的权限
 	 * @author : KLP
 	 * @param upmsUserId
 	 * @return
 	 */
-	List<UpmsPermission> selectUpmsUserPermissionByUpmsUserId(Integer upmsUserId);
+	List<UpmsUserPermission> selectUpmsUserPermissionByUpmsUserId(Integer upmsUserId);
 
 	/**
 	 * 根据条件获取系统数据
