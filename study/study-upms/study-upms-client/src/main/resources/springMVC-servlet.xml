@@ -9,10 +9,10 @@
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 
     <!-- 日志记录AOP实现 -->
-    <bean class="com.zheng.upms.client.interceptor.LogAspect"/>
+    <bean class="com.study.upms.client.interceptor.LogAspect"/>
 
 
     <!-- 日志记录AOP实现 -->
-    <bean class="com.zheng.common.aspect.RpcLogAspect"/>
+    <bean class="com.study.common.aspect.RpcLogAspect"/>
 
 </beans>
